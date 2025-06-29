@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<title>EU MOD - Cài đặt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .app-header img {
+      width: 70px;
+      height: 70px;
+      border-radius: 16px;
+    }
+    .app-info {
+      flex-grow: 1;
+    }
+    .app-info h1 {
+      font-size: 22px;
+      margin: 0;
+    }
+    .app-info .sub {
+      color: #666;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+    .install-button {
+      display: block;
+      margin: 25px auto 10px auto;
+      background-color: #00c853;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px 0;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      width: 90%;
+      max-width: 280px;
+    }
+    .install-msg {
+      display: none;
+      margin-top: 20px;
+      color: #333;
+      font-size: 14px;
+      text-align: center;
+      background: #f0f0f0;
+      border-radius: 8px;
+      padding: 12px;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+      animation: pulse 1.5s infinite alternate;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.03); }
+    }
+    .section {
+      margin-top: 30px;
+    }
+    .section h3 {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .section ol {
+      padding-left: 20px;
+    }
+    .meta-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #777;
+      margin-top: 25px;
+      border-top: 1px solid #eee;
+      padding-top: 15px;
+    }
+    .rating-stats {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #444;
+    }
+    .rating-stats div strong {
+      font-size: 18px;
+      color: #000;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .stars {
+      color: #f5c518;
+      font-size: 14px;
+    }
+    .spinner-left {
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid white;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      animation: spin 0.8s linear infinite;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="app-header">
+    <img src="IMG_2909.png" alt="App Icon"/>
+    <div class="app-info">
+      <h1>AOV V4.2</h1>
+      <div class="sub">Mod By Dang Trong Duc</div>
+    </div>
+  </div>
+  <a class="install-button" href="#" id="installBtn" onclick="startInstall();">INSTALL</a>
+  <div class="install-msg" id="installMsg">
+    ✅ <strong>Đã cài đặt thành công!</strong><br>
+    ⏳ Vui lòng thoát ra màn hình chờ để tải ứng dụng<br>
+    ✅ <strong>Installed successfully!</strong><br>
+    ⏳ Please return to Home Screen to wait for installation
+  </div>
+  <div class="rating-stats">
+    <div><strong>1,2K</strong><div class="stars">★★★★☆</div><div>Ratings</div></div>
+    <div><strong>17+</strong><div>Age</div></div>
+    <div><strong>196 MB</strong><div>Size</div></div>
+  </div>
+  <div class="section">
+    <h3>ENGLISH</h3>
+    <ol>
+      <li>Install the app</li>
+      <li>Go to Settings → General → VPN & Device Management</li>
+      <li>Tap the enterprise certificate name</li>
+      <li>Select Trust</li>
+    </ol>
+    <h3>TIẾNG VIỆT</h3>
+    <ol>
+      <li>Cài app</li>
+      <li>Vào Cài đặt → Cài đặt chung → Quản lý VPN & thiết bị</li>
+      <li>Nhấn vào tên chứng chỉ</li>
+      <li>Chọn Tin cậy</li>
+    </ol>
+  </div>
+  <div class="meta-info">
+    <div><strong>VERSION</strong><br/>V4</div>
+    <div><strong>UPDATED</strong><br/>Jun 15, 2025</div>
+  </div>
+</div>
+<script>
+function startInstall() {
+  const btn = document.getElementById("installBtn");
+  btn.innerHTML = '<span class="spinner-left"></span>ĐANG TẢI...';
+  btn.style.backgroundColor = '#aaa';
+  btn.style.pointerEvents = 'none';
+
+  setTimeout(() => {
+    window.location.href = 'itms-services://?action=download-manifest&url=https://nookc01.github.io/GAME-HACK/manifest.plist';
+  }, 200);
+
+  setTimeout(() => {
+    const msg = document.getElementById("installMsg");
+    msg.style.display = 'block';
+    msg.style.opacity = 1;
+  }, 5200);
+}
+</script>
+</body>
+</html>
