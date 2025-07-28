@@ -17,7 +17,7 @@
       <key>metadata</key>
       <dict>
         <key>bundle-identifier</key>
-        <string>eu.nookc</string>
+        <string>com.nookc</string>
         <key>bundle-version</key>
         <string>1.59.11435354</string>
         <key>kind</key>
